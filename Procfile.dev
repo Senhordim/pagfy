@@ -1,0 +1,2 @@
+web: ruby app.rb
+css: bundle exec tailwind watch
