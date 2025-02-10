@@ -11,8 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 1) do
-  create_table "transactions", force: :cascade do |t|
-    t.string "type"
+  create_table "transactions", primary_key: "uuid", id: :string, force: :cascade do |t|
+    t.string "type_transaction"
     t.text "description"
     t.decimal "amount", precision: 10, scale: 2
     t.datetime "created_at", null: false

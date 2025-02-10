@@ -2,15 +2,14 @@
 
 require 'sinatra'
 require 'sinatra/tailwind'
-require 'sinatra/activerecord'
+require 'sinatra/reloader'
+
+require_relative 'app/models/transaction_model'
+
+require_relative 'app/routes'
 
 set :database_file, File.expand_path('config/database.yml', __dir__)
 
 register Sinatra::Tailwind
 
-class Transaction < ActiveRecord::Base
-end
-
-get '/' do
-  erb :index
-end
+register Sinatra::Reloader

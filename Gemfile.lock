@@ -32,6 +32,7 @@ GEM
     logger (1.6.5)
     mini_portile2 (2.8.8)
     minitest (5.25.4)
+    multi_json (1.15.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     pastel (0.8.0)
@@ -59,6 +60,14 @@ GEM
     sinatra-activerecord (2.0.28)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-contrib (4.1.1)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.1.1)
+      sinatra (= 4.1.1)
+      tilt (~> 2.0)
+    sinatra-reloader (1.0)
+      sinatra-contrib
     sinatra-tailwind (0.2.1)
       json (~> 2.9)
       sinatra (~> 4.1.1)
@@ -92,8 +101,11 @@ PLATFORMS
 DEPENDENCIES
   rackup (~> 2.2)
   rake (~> 13.2)
+  securerandom (~> 0.4.1)
   sinatra
   sinatra-activerecord (~> 2.0)
+  sinatra-contrib (~> 4.1)
+  sinatra-reloader (~> 1.0)
   sinatra-tailwind (~> 0.2.1)
   sqlite3 (~> 2.5)
 

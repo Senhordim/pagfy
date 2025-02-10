@@ -1,3 +1,3 @@
 web: ruby app.rb
 css: bundle exec tailwind watch
-db:  bundle exec rake db:migrate
+
